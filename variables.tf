@@ -8,6 +8,9 @@ variable "password" {
 variable "controller_ip" {
 }
 
+variable "ace_password" {
+}
+
 variable "aws_account_name" {
   default = "aws-account"
 }
@@ -92,4 +95,3 @@ variable "ha_enabled" {
   type    = bool
   default = false
 }
-
