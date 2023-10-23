@@ -25,7 +25,7 @@ resource "aviatrix_account" "azure_account" {
 # AWS Transit Modules
 module "aws_transit_1" {
   source              = "terraform-aviatrix-modules/mc-transit/aviatrix"
-  version             = "2.4.1"
+  version             = "2.3.0"
   cloud               = "AWS"
   account             = var.aws_account_name
   region              = var.aws_transit1_region
@@ -80,8 +80,6 @@ resource "aviatrix_segmentation_network_domain" "BU2" {
 }
   
 resource "aviatrix_segmentation_network_domain_connection_policy" "BU1_BU2" {
- domain_name_1 = aviatrix_segmentation_network_domain.BU1.domain_name
- domain_name_2 = aviatrix_segmentation_network_domain.BU2.domain_name
-} 
-
-
+  domain_name_1 = aviatrix_segmentation_network_domain.BU1.domain_name
+  domain_name_2 = aviatrix_segmentation_network_domain.BU2.domain_name
+}
