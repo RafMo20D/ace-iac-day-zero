@@ -2,11 +2,10 @@ provider "aviatrix" {
   controller_ip = var.controller_ip
   username      = var.username
   password      = var.password
-  skip_version_validation = true
 }
 
 provider "aws" {
-  alias  = "N.Virginia"
+  alias  = "ohio"
   region = var.aws_spoke1_region
 }
 
