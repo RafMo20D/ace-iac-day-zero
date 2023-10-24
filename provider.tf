@@ -5,7 +5,7 @@ provider "aviatrix" {
 }
 
 provider "aws" {
-  alias  = "some_provider"
+  alias  = "us-east-1"
   region = var.aws_spoke1_region
 }
 
